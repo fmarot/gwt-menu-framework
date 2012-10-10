@@ -1,0 +1,30 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+    xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+    <g:DockLayoutPanel unit='EM'>
+
+        <g:north size='6'>
+            <g:ScrollPanel ui:field="headerPanel"></g:ScrollPanel>
+        </g:north>
+
+        <g:center>
+            <g:ScrollPanel ui:field="centerPanel">
+
+            </g:ScrollPanel>
+        </g:center>
+
+        <g:south size='6'>
+            <g:ScrollPanel ui:field="footerPanel">
+            </g:ScrollPanel>
+        </g:south>
+
+    </g:DockLayoutPanel>
+
+</ui:UiBinder>
+
+
+

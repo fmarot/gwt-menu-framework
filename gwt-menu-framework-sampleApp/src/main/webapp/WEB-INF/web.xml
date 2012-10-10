@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <!-- Presentation framework parameters -->
+    <context-param>
+        <param-name>com.teamtter.gwt.presentation.gxt.menuConfig</param-name>
+        <param-value>menu-v3.xml</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>contactsServiceServlet</servlet-name>
+        <servlet-class>com.teamtter.gwt.frameworksampleapp.server.ContactsServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contactsServiceServlet</servlet-name>
+        <url-pattern>/SampleApp/contactsService</url-pattern>
+    </servlet-mapping>
+
+    <!-- Presentation Framework servlets -->
+    <servlet>
+        <servlet-name>frameworkServlet</servlet-name>
+        <servlet-class>com.teamtter.gwt.framework.server.FrameworkServiceImpl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>frameworkServlet</servlet-name>
+        <url-pattern>/SampleApp/framework</url-pattern>
+    </servlet-mapping>
+
+    <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>SampleApp.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>

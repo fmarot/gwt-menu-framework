@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:menuConfiguration xmlns:tns="urn:teamtter:gwt:technical:menu:v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:teamtter:gwt:technical:menu:v3 menu-v3.xsd ">
+
+  <menu menuName="applicationMenu">
+	  <tns:menuItem i18n-key="Contacts">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	    <tns:menuItem i18n-key="List">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="Add">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="shared.menu.subitem1-3.link">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="shared.menu.item2.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	    <tns:menuItem i18n-key="shared.menu.subitem2-1.link">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="Add (1)">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="Add (2)">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="shared.menu.item3.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	    <tns:menuItem i18n-key="shared.menu.subitem3-1.link">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="shared.menu.subitem3-2.link">
+		    <userRight userRightName="User"/>
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="shared.menu.subitem3-3.link">
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="shared.menu.item4.link">
+	    <userRight userRightName="Admin"/>
+	    <tns:menuItem i18n-key="shared.menu.subitem4-1.link">
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="shared.menu.subitem4-2.link">
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	    <tns:menuItem i18n-key="shared.menu.subitem4-3.link">
+		    <userRight userRightName="Admin"/>
+		</tns:menuItem>    
+	  </tns:menuItem>
+  </menu>
+  
+  <menu menuName="headerMenu">
+	  <tns:menuItem i18n-key="gwt.toolbar.home.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="gwt.toolbar.help.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="gwt.toolbar.logout.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="shared.toolbar.admin.link">
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+  </menu>
+  
+  <menu menuName="footerMenu">
+	  <tns:menuItem i18n-key="gwt.toolbar.home.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="gwt.toolbar.help.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+	  <tns:menuItem i18n-key="gwt.toolbar.logout.link">
+	    <userRight userRightName="User"/>
+	    <userRight userRightName="Admin"/>
+	  </tns:menuItem>
+  </menu>
+</tns:menuConfiguration>

@@ -1,0 +1,80 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+    xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+    xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+
+    <ui:with type="com.sencha.gxt.core.client.util.Margins" field="outerMargins">
+        <ui:attributes top="0" right="0" bottom="0" left="0" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.core.client.util.Margins" field="northMargins">
+        <ui:attributes top="0" right="0" bottom="0" left="0" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.core.client.util.Margins" field="centerMargins">
+        <ui:attributes top="0" right="0" bottom="0" left="0" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.core.client.util.Margins" field="southMargins">
+        <ui:attributes top="0" right="0" bottom="0" left="0" />
+    </ui:with>
+
+    <ui:with type="com.sencha.gxt.widget.core.client.container.MarginData" field="outerData">
+        <ui:attributes margins="{outerMargins}" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData" field="northData">
+        <ui:attributes size="0" margins="{northMargins}" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.widget.core.client.container.MarginData" field="centerData">
+        <ui:attributes margins="{centerMargins}" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData" field="southData">
+        <ui:attributes size="0" margins="{southMargins}" />
+    </ui:with>
+
+
+
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+        field="statusBarTextData">
+        <ui:attributes height="200" />
+    </ui:with>
+    <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+        field="centerPanelData">
+        <ui:attributes height="200" />
+    </ui:with>
+  
+    <container:Viewport>    <!-- a Viewport allows its content to adapt, including on browser resizing -->
+        <container:child>
+        
+            <container:BorderLayoutContainer  borders="false">
+            
+                <container:north >
+                    <gxt:ContentPanel ui:field="headerPanel" headerVisible="false" />
+                </container:north>
+                
+                <container:center >
+                    <container:VerticalLayoutContainer>
+                        <container:child layoutData="{statusBarTextData}">
+                            <g:Label ui:field="statusBarText" />
+                        </container:child>
+                        <container:child layoutData="{centerPanelData}">
+                            <gxt:ContentPanel
+                                headingText="BorderLayout UiBinder Example"
+                                ui:field="centerPanel"
+                                headerVisible="false">
+                            </gxt:ContentPanel>
+                        </container:child>
+                    </container:VerticalLayoutContainer>                   
+                </container:center>
+                
+                <container:south>
+                    <gxt:ContentPanel ui:field="footerPanel" headerVisible="false"/>
+                </container:south>
+                
+            </container:BorderLayoutContainer>
+            
+        </container:child>
+    </container:Viewport>
+    
+</ui:UiBinder>
+
+
+

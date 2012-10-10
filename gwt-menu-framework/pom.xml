@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.teamtter.gwt</groupId>
+		<artifactId>gwt-menu-framework-project</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>gwt-menu-framework</artifactId>
+	<packaging>jar</packaging>
+
+	<properties>
+		<!-- <gwt.module>com.teamtter.tests.App</gwt.module> -->
+		<!-- <gwt.draftCompile>false</gwt.draftCompile> -->
+		<!-- <gwt.style>OBF</gwt.style> -->
+		<!-- <gwt.genParam>false</gwt.genParam> -->
+		<!-- < ! - - keep in sync with gwtmenuframework-server - - > -->
+		<!-- <runTarget>http://localhost:8080/</runTarget> -->
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava-gwt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.google.web.bindery</groupId>
+			<artifactId>requestfactory-client</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- A partir du XSD, generation des classes permettant de mapper le xml 
+				du menu -->
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<generatePackage>com.teamtter.gwt.framework.client.menu.jaxb</generatePackage>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<!-- <configuration> -->
+				<!-- <module>${gwt.module}</module> -->
+				<!-- <strict>true</strict> -->
+				<!-- <draftCompile>${gwt.draftCompile}</draftCompile> -->
+				<!-- <style>${gwt.style}</style> -->
+				<!-- <genParam>${gwt.genParam}</genParam> -->
+				<!-- <noserver>true</noserver> -->
+				<!-- <runTarget>${runTarget}</runTarget> -->
+				<!-- </configuration> -->
+				<goals>
+					<goal>resources</goal>
+					<goal>compile</goal>
+					<goal>generateAsync</goal>
+				</goals>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-generated-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>target/generated-sources/gwt</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<packagingExcludes>WEB-INF/**</packagingExcludes>
+				</configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat6-maven-plugin</artifactId>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

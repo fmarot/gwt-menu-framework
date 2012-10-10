@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:teamtter:gwt:technical:menu:v1"
+    targetNamespace="urn:teamtter:gwt:technical:menu:v1" version="1.0">
+  <xsd:element name="userRight" type="tns:UserRight"/>
+  <xsd:element name="menu" type="tns:Menu"/>
+  <xsd:element name="menuItem" type="tns:MenuItem"/>
+  <xsd:element name="menuConfiguration" type="tns:MenuConfiguration"/>
+  <xsd:complexType name="UserRight">
+    <xsd:attribute name="userRightName" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:complexType name="Menu">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" ref="tns:menuItem"/>
+    </xsd:sequence>
+    <xsd:attribute name="menuName" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:complexType name="MenuItem">
+    <xsd:sequence>      <xsd:element name="userRight" maxOccurs="unbounded" minOccurs="0" type="tns:UserRight"/>
+      <xsd:element maxOccurs="unbounded" minOccurs="0" ref="tns:menuItem"/>
+    </xsd:sequence>
+    <xsd:attribute name="i18n-key" type="xsd:string"/>
+  </xsd:complexType>
+  <xsd:complexType name="MenuConfiguration">
+    <xsd:sequence>
+      <xsd:element name="menu" maxOccurs="unbounded" minOccurs="0" type="tns:Menu"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>
