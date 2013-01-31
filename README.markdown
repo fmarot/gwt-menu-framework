@@ -20,4 +20,4 @@ A *LOT* of stuffs !
 * remove all trace of GXT 3 lib. Only use standard GWT components and layout
 * make the app look like something. Anything but something (right now even the menus are mostly hidden)
 * rework/clean/test the maven build (keep only what's necessary)
-* ... 
+* See to maybe use this way to override Gin modules: "Here are configured how each instance returned by gin are configured TIP: if you want to override a binding defined in the Framework module, see how to do it using the 'Module.override(...) method and refer to <a href="http://stackoverflow.com/questions/483087/overriding-binding-in-guice#531110">this thread</a>. "
