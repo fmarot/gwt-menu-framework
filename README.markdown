@@ -4,7 +4,7 @@
 GWT-Menu-Framework is a GWT based framework intending to enable fast application creation with a standard layout (header/footer) + a XML defined menu.
 It's aim is to keep it simple and enforce the use of the MVP pattern in the client applications.
 All screens in the clients applications should be MVP-based (a framework-handled Presenter and a View).
-
+ 
 # Content
 3 maven based projects
 * a parent pom project ( gwt-menu-framework-project)
