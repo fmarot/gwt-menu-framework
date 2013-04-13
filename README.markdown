@@ -1,4 +1,4 @@
-[![Build Status](http://teamtter.com:8081/job/gwt-menu-framework/badge/icon)](http://teamtter.com:8081/job/gwt-menu-framework/)
+[![Build Status](http://teamtter.com:8080/job/gwt-menu-framework/badge/icon)](http://teamtter.com:8081/job/gwt-menu-framework/)
 
 # What is GWT-Menu-Framework ? 
 GWT-Menu-Framework is a GWT based framework intending to enable fast application creation with a standard layout (header/footer) + a XML defined menu.
